@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./index.scss";
 import { NavLink } from "react-router-dom";
-
+import Colors from "./Colors";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
@@ -25,9 +25,7 @@ const Navbar = () => {
       </div>
       <ul className={active ? "active" : ""}>
         <li>
-          <div>
-            <img src={require("../assets/palette.svg")} alt="color-palette" />
-          </div>
+          <Colors/>
         </li>
         <li>
           <NavLink
