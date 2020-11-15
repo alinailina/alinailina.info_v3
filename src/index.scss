@@ -325,6 +325,9 @@ body {
       align-items: center;
       justify-content: space-between;
       padding: 2vw 0;
+      @include phone {
+        padding: 5vw 0;
+      }
       margin-bottom: 10px;
       cursor: pointer;
 
