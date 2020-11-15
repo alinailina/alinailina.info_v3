@@ -97,6 +97,9 @@
     margin: 0;
     position: relative;
     top: -1.5vw;
+    @include phone {
+      top: -2vw;
+    }
 
     p {
       @include text;

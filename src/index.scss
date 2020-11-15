@@ -264,7 +264,8 @@ body {
 @mixin button {
   width: 225px;
   padding: 8px 0;
-  border: 1px solid $dark-gray;
+  border: 1px solid $black;
+  border-radius: 1px;
   @include text;
   @include phone {
     font-weight: 400;
@@ -324,7 +325,7 @@ body {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 2vw 0;
+      padding: 3vw 0;
       @include phone {
         padding: 5vw 0;
       }
@@ -343,6 +344,9 @@ body {
         justify-content: space-between;
         align-items: flex-start;
         width: 60%;
+        @include phone {
+          width: 100%;
+        }
 
         // Title
         > h3 {
@@ -364,6 +368,9 @@ body {
 
       > div {
         width: 60%;
+        @include phone {
+          width: 100%;
+        }
       }
 
       p {

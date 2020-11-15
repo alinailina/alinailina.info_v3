@@ -21,7 +21,7 @@ const Faq = ({ faq }) => {
       : "0px";
     questionRef.current.style.borderBottom = active
       ? "none"
-      : "1px solid #bebebe";
+      : "1px solid #2d2d2d";
     questionRef.current.style.color = active ? "#ff4f09" : "#2d2d2d";
   }, [active]);
 

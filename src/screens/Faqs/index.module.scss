@@ -13,8 +13,10 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 2vw 0;
-        margin-bottom: 10px;
+        padding: 3vw 0;
+        @include phone {
+          padding: 5vw 0;
+        }
         cursor: pointer;
 
         // Text
@@ -115,7 +117,8 @@
             padding: 0.5vw;
           }
           border: none;
-          border: 1px solid $dark-gray;
+          border: 1px solid $black;
+          border-radius: 1px;
           outline: none;
           -webkit-appearance: none;
           margin: 10px 0;

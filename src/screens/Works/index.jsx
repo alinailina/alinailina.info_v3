@@ -41,7 +41,7 @@ const App = () => {
     <div className={css.container}>
       <Header title="Works" />
       <Projects projects={projects} />
-      <section>
+      {/* <section>
         <p>
           Something interesting is cooking here. Come back in a bit, or get
           notified when this page is ready!
@@ -68,7 +68,7 @@ const App = () => {
           to see what I've been up to, or my <Link to="/faqs">Faqs</Link> page
           to find how I can be of service for you today.
         </p>
-      </section>
+      </section> */}
     </div>
   );
 };
