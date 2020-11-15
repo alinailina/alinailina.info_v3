@@ -20,7 +20,7 @@ const Navbar = () => {
       </div>
       <div className="logo">
         <NavLink to="/" exact>
-          <img src={require("../assets/logo.svg")} alt="logo" />
+          <img src={require("../assets/palette_mobile.svg")} alt="logo" />
         </NavLink>
       </div>
       <ul className={active ? "active" : ""}>

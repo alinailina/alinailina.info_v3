@@ -65,6 +65,7 @@
         border-bottom: 1px solid $black;
         display: block;
         width: 100%;
+        padding-bottom: 25px;
         margin-bottom: 50px;
       }
     }
@@ -81,7 +82,7 @@
 
   > div:first-of-type {
     grid-area: header;
-    border-bottom: 1px solid $dark-gray;
+    border-bottom: 1px solid $black;
 
     h3 {
       @include text-XS;

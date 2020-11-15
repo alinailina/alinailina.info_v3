@@ -14,17 +14,14 @@ const App = () => {
           Call
           <a href="tel:+358465935910">+358465935910</a>
         </label>
-
         <label>
           Email
           <a href="mailto:alinailina.random@gmail.com">ai.random@gmail.com</a>
         </label>
-
         <label>
           Visit
           <p>Helsinki, Finland</p>
         </label>
-
         <label>
           Download
           <a href="/" target="_blank" rel="noopener noreferrer">
@@ -36,16 +33,16 @@ const App = () => {
       <div>
         <p>Follow</p>
         <div>
-          <a href="/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/alinailina/" target="_blank" rel="noopener noreferrer">
             Linkedin
             <RiArrowRightUpLine />
           </a>
-          <a href="/">
-            Twitter
+          <a href="https://github.com/alinailina" target="_blank" rel="noopener noreferrer">
+            Github
             <RiArrowRightUpLine />
           </a>
-          <a href="/">
-            Github
+          <a href="https://twitter.com/alinaimagineer" target="_blank" rel="noopener noreferrer">
+            Twitter
             <RiArrowRightUpLine />
           </a>
         </div>
