@@ -1,0 +1,150 @@
+@import "../../index.scss";
+
+.container {
+  @include container;
+  .faqs {
+    .faq {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      // Question
+      > div:first-of-type {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2vw 0;
+        margin-bottom: 10px;
+        cursor: pointer;
+
+        // Text
+        > p {
+          display: block;
+          width: 80%;
+          @include text;
+        }
+
+        // Icon
+        > div {
+          @include text;
+        }
+      }
+
+      // Answer
+      > div:nth-of-type(2) {
+        overflow: hidden;
+        transition: all 0.5s ease;
+        padding: 0;
+        p {
+          @include text;
+          margin-bottom: 25px;
+          b {
+            font-weight: inherit;
+            background: linear-gradient(
+              180deg,
+              rgba(255, 255, 255, 0) 90%,
+              $red 10%
+            );
+          }
+        }
+      }
+    }
+  }
+
+  > div:nth-of-type(2) {
+    @include phone {
+      padding: 50px 0 0;
+    }
+
+    @include tablet {
+      padding: 8vw 0 0;
+    }
+
+    @include desktop {
+      padding: 6vw 0 0;
+    }
+
+    h3 {
+      @include text-L;
+      margin-bottom: 25px;
+      @include desktop {
+        margin-bottom: 2vw;
+      }
+    }
+
+    p {
+      @include text;
+    }
+
+    // Form
+    form {
+      // border: 1px solid;
+      display: flex;
+      flex-direction: column;
+
+      > div {
+        display: flex;
+        justify-content: space-between;
+
+        label {
+          width: 45%;
+        }
+
+        @include phone {
+          flex-direction: column;
+          label {
+            width: 100%;
+          }
+        }
+      }
+
+      label {
+        display: flex;
+        flex-direction: column;
+        @include text-XS;
+        margin: 25px 0;
+        @include desktop {
+          margin: 35px 0;
+        }
+
+        input,
+        textarea {
+          @include text;
+          padding: 8px 5px;
+          @media only screen and (min-width: 2400px) {
+            padding: 0.5vw;
+          }
+          border: none;
+          border: 1px solid $dark-gray;
+          outline: none;
+          -webkit-appearance: none;
+          margin: 10px 0;
+        }
+
+        textarea {
+          resize: none;
+
+          &:focus {
+            height: 200px;
+            @include desktop {
+              height: 300px;
+            }
+          }
+        }
+
+        p {
+          @include text-XS;
+          color: $black;
+
+          padding: 10px 0;
+        }
+      }
+
+      > div:last-of-type {
+        input[type="submit"] {
+          @include button;
+        }
+      }
+    }
+  }
+}

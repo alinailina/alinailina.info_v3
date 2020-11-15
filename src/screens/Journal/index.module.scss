@@ -1,0 +1,40 @@
+@import "../../index.scss";
+
+.container {
+  @include container;
+
+  > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .post {
+      width: 45%;
+      margin-bottom: 5vw;
+
+      @include phone {
+        width: 100%;
+        margin-bottom: 25px;
+      }
+
+      // Date, description
+      p {
+        @include text-XS;
+        &:first-of-type {
+          color: $dark-gray;
+        }
+      }
+
+      img {
+        width: 100%;
+        margin: 10px 0;
+        filter: grayscale(100%);
+      }
+
+      // Title
+      h3 {
+        @include text;
+      }
+    }
+  }
+}

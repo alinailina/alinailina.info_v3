@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="430" height="430.395" viewBox="0 0 430 430.395">
+  <g id="Group_560" data-name="Group 560" transform="translate(-8884 -11835)">
+    <circle id="Ellipse_323" data-name="Ellipse 323" cx="215" cy="215" r="215" transform="translate(8884 11835)" fill="#f2f2f2"/>
+    <g id="Group_231" data-name="Group 231" transform="translate(32027 -3702)">
+      <g id="BLOUSE" transform="translate(-23067.824 15841.869)">
+        <path id="BLOUSE-2" data-name="BLOUSE" d="M364.189,307.479c25.15-17.36,84.641-45.939,108.6-69.3l99.42-4.79c32.32,25.15,68.09,43.717,81.86,63.957C654.07,297.347,524.73,428.853,364.189,307.479Z" transform="translate(-364.189 -233.39)" fill="#2d2d2d"/>
+      </g>
+      <g id="HEAD" transform="translate(-23072.434 15601)">
+        <g id="HAIR" transform="translate(5 7)">
+          <path id="Path_417" data-name="Path 417" d="M640.88,164.72s-132,39.94-244.7,34.55c0,0-37.51-46.72-15.17-67.29,20.18-18.57,47.08-29.54,35.9-44.31s-21.94-36.53,9.6-54.1S514.73-11.34,549.27,5C574.76,17.1,560.65,51,576,51.53c17.77.61,40.39,12.42,34.35,42.16C602.56,132,652.06,101.64,640.88,164.72Z" transform="translate(-358.58 0.013)" fill="#654321"/>
+          <path id="Path_418" data-name="Path 418" d="M382.18,199.27S338.49,154.91,370,128c20.85-17.81,47.08-25.54,35.9-40.31s-21.94-36.53,9.6-54.1S504.46-4,538.27,3" transform="translate(-358.58 0.013)" fill="none"/>
+        </g>
+        <g id="NECK" transform="translate(85.142 150.55)">
+          <path id="Path_419" data-name="Path 419" d="M548.27,128s-5.39,63.269,24,92.8c0,0-8.7,28.829-71.292,31.855-.365.018.635-.021,0,0-63.48,2.1-28.128-27.638-28.128-27.638s15.57-18.489,13.16-65.382Z" transform="translate(-443.722 -131)" fill="#ffe2c9"/>
+          <path id="Path_420" data-name="Path 420" d="M547.86,128.23c-8.85,23.3-30.28,69.08-63.4,73.4A204.5,204.5,0,0,0,486,163.92Z" transform="translate(-443.722 -128)" fill="#ffcba3"/>
+        </g>
+        <path id="HEAD-2" data-name="HEAD" d="M548.27,128s-19.17,48.7-67.08,48.7c-8.38,0-40.48-32.07-38.11-84s58.47-53.37,58.47-53.37-4,54.3,43.73,61.89c0,0,12.16-10.78,17-1.2S548.27,128,548.27,128Z" transform="translate(-355.58 17.013)" fill="#ffe2c9"/>
+        <path id="HAIR-2" data-name="HAIR" d="M501.55,38.36s-18,55.3,29.73,62.89" transform="translate(-359.58 15.013)" fill="none"/>
+      </g>
+    </g>
+    <g id="Group_232" data-name="Group 232" transform="translate(32886 -3912)">
+      <line id="Line_164" data-name="Line 164" y2="24.534" transform="translate(-23731.895 15943.5)" fill="none" stroke="#f2f2f2" stroke-linecap="round" stroke-width="3"/>
+      <line id="Line_165" data-name="Line 165" x1="12" transform="translate(-23738 15951)" fill="none" stroke="#f2f2f2" stroke-linecap="round" stroke-width="3"/>
+    </g>
+  </g>
+</svg>

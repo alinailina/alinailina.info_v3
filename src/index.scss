@@ -1,0 +1,383 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300;1,400&display=swap");
+
+@font-face {
+  font-family: "Regular";
+  font-style: normal;
+  src: url("./assets/fonts/ITCAvantGardeStdBk.otf"); /* IE9 Compat Modes */
+}
+
+@font-face {
+  font-family: "Light";
+  font-style: normal;
+  src: url("./assets/fonts/ITCAvantGardeStdXLt.otf"); /* IE9 Compat Modes */
+}
+
+@font-face {
+  font-family: "Medium";
+  font-style: normal;
+  src: url("./assets/fonts/ITCAvantGardeStdMd.otf"); /* IE9 Compat Modes */
+}
+
+$pink: #febecc;
+$blue: #017cfd;
+$red: #ff4f09;
+
+$black: #2d2d2d;
+$yellow: #fef000;
+$gray: #f2f2f2;
+$dark-gray: #bebebe;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Regular", monospace;
+
+  font-weight: 200;
+  color: $black;
+
+  line-height: 1.5;
+  //text-transform: uppercase;
+}
+
+@mixin phone {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: 769px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin container {
+  //border: 1px solid;
+  width: 77.5vw;
+  @include desktop {
+    width: 82.5vw;
+  }
+
+  margin-left: auto;
+  padding: 7vw 5vw 2vw;
+
+  @include phone {
+    width: 90vw;
+    margin: 0 auto;
+    padding: 125px 0 30px;
+  }
+}
+
+@mixin padding {
+  @include phone {
+    padding: 25px 0;
+  }
+
+  @include tablet {
+    padding: 100px 0;
+  }
+
+  @include desktop {
+    padding: 5vw 0;
+  }
+}
+
+@mixin text {
+  @include phone {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  @include tablet {
+    font-size: 1.25rem;
+  }
+
+  @include desktop {
+    font-size: 1.5rem;
+  }
+
+  @media only screen and (min-width: 1800px) {
+    font-size: 1.25vw;
+  }
+}
+
+@mixin text-XL {
+  font-weight: 300;
+
+  @include phone {
+    font-size: 2rem;
+  }
+
+  @include tablet {
+    font-size: 2.5rem;
+  }
+
+  @include desktop {
+    font-size: 3rem;
+  }
+
+  @media only screen and (min-width: 1800px) {
+    font-size: 3vw;
+  }
+}
+
+@mixin text-L {
+  font-weight: 600;
+
+  @include phone {
+    font-size: 1.5rem;
+  }
+
+  @include tablet {
+    font-size: 1.75rem;
+  }
+
+  @include desktop {
+    font-size: 2.25vw;
+  }
+
+  @media only screen and (min-width: 1800px) {
+    font-size: 2vw;
+  }
+}
+
+// Small text
+@mixin small-text {
+  @include phone {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  @include tablet {
+    font-size: 1.25rem;
+  }
+
+  @include desktop {
+    font-size: 1.5rem;
+  }
+
+  @media only screen and (min-width: 1800px) {
+    font-size: 1.5vw;
+  }
+}
+
+// Small text
+@mixin text-XS {
+  font-family: "Regular";
+  @include phone {
+    font-size: 14px;
+  }
+
+  @include tablet {
+    font-size: 1rem;
+  }
+
+  @include desktop {
+    font-size: 1rem;
+  }
+
+  @media only screen and (min-width: 1800px) {
+    font-size: 1vw;
+  }
+}
+
+// Link
+@mixin link {
+  color: $black;
+  text-decoration: underline;
+  transition: all 0.25s ease;
+
+  &:hover {
+    color: $red;
+    text-decoration: none;
+  }
+}
+
+@mixin highlight {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 90%, $red 10%);
+}
+
+@mixin border {
+  border: 1px solid red;
+}
+
+// Backgrounds
+@mixin square-bg {
+  background-image: linear-gradient(
+      transparent 150px,
+      rgba(45, 45, 45, 0.25) 151px,
+      transparent 151px
+    ),
+    linear-gradient(
+      90deg,
+      transparent 150px,
+      rgba(45, 45, 45, 0.25) 151px,
+      transparent 151px
+    );
+  background-size: 100% 151px, 151px 100%;
+  background-attachment: fixed;
+
+  // Desktop
+  @media only screen and (min-width: 2400px) {
+    background-image: linear-gradient(
+        transparent 250px,
+        rgba(45, 45, 45, 0.25) 252px,
+        transparent 252px
+      ),
+      linear-gradient(
+        90deg,
+        transparent 250px,
+        rgba(45, 45, 45, 0.25) 252px,
+        transparent 252px
+      );
+    background-size: 100% 252px, 252px 100%;
+  }
+
+  // Phone
+  @include phone {
+    background-image: linear-gradient(
+        transparent 100px,
+        rgba(45, 45, 45, 0.1) 101px,
+        transparent 101px
+      ),
+      linear-gradient(
+        90deg,
+        transparent 100px,
+        rgba(45, 45, 45, 0.1) 101px,
+        transparent 101px
+      );
+    background-size: 100% 101px, 101px 100%;
+  }
+}
+
+// Button
+@mixin button {
+  width: 225px;
+  padding: 8px 0;
+  border: 1px solid $dark-gray;
+  @include text;
+  @include phone {
+    font-weight: 400;
+  }
+
+  @include desktop {
+    width: 15vw;
+    min-width: 250px;
+  }
+
+  background-color: $gray;
+  color: $black;
+  cursor: pointer;
+  -webkit-appearance: none;
+  outline: none;
+
+  &:hover,
+  &:active {
+    background-color: $dark-gray;
+    outline: none;
+  }
+
+  // Desktop
+  @media only screen and (min-width: 2400px) {
+    width: 20vw;
+    padding: 0.5vw 0;
+  }
+  // For links
+  text-align: center;
+  text-decoration: none;
+}
+
+// Toggle for accordeon
+.accToggle {
+  position: relative;
+  //border: 1px solid;
+  transform: rotate(0deg);
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.66, 0, 0.34, 1);
+  left: 0;
+  &.active {
+    transform: rotate(45deg);
+    left: -2px;
+  }
+}
+
+// Accordeon
+.projects {
+  .project {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    // Header bar
+    > div:first-of-type {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2vw 0;
+      margin-bottom: 10px;
+      cursor: pointer;
+
+      // Num
+      > p {
+        display: block;
+        width: 40%;
+        @include text;
+      }
+
+      > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 60%;
+
+        // Title
+        > h3 {
+          @include text;
+        }
+        // Toggle
+        > div {
+          @include text;
+        }
+      }
+    }
+
+    // Description
+    > div:nth-of-type(2) {
+      overflow: hidden;
+      transition: all 0.5s ease;
+      display: flex;
+      justify-content: flex-end;
+      > div {
+        width: 60%;
+      }
+
+      p {
+        @include text;
+        color: $dark-gray;
+        margin-bottom: 25px;
+      }
+
+      a {
+        display: block;
+        @include text;
+        @include link;
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+
+img {
+  width: 100%;
+}

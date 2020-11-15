@@ -1,0 +1,23 @@
+@import "../../index.scss";
+
+.container {
+  @include container;
+
+  > div {
+    p {
+      @include text;
+      max-width: 35em;
+      margin-bottom: 25px;
+
+      a {
+        @include link;
+      }
+    }
+    > div {
+      width: 25%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

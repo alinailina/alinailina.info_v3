@@ -1,0 +1,21 @@
+@import "../../index.scss";
+
+.container {
+  @include padding;
+
+  // Header
+  > div:first-of-type {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+
+    h3,
+    a {
+      @include text-XS;
+    }
+
+    a {
+      @include link;
+    }
+  }
+}

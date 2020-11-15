@@ -1,0 +1,249 @@
+@import "../../index.scss";
+
+.container {
+  @include container;
+}
+
+.hero {
+  margin-bottom: 25px;
+  @include desktop {
+    margin-bottom: 2vw;
+  }
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    // Text
+    h1 {
+      display: block;
+      line-height: 1;
+      width: 40%;
+      margin: 0;
+      @include phone {
+        font-size: 10vw;
+      }
+
+      @include tablet {
+        font-size: 5rem;
+      }
+
+      @include desktop {
+        font-size: 8vw;
+      }
+    }
+
+    // Img
+    > div {
+      width: 60%;
+      > div {
+        width: 90%;
+        margin: 0 auto;
+      }
+      img {
+        width: 100%;
+        //  filter: grayscale(100%);
+      }
+    }
+
+    @include phone {
+      flex-direction: column;
+
+      // Img
+      > div {
+        //@include border;
+        width: 70%;
+        img {
+          width: 100%;
+        }
+      }
+
+      // Text
+      h1 {
+        // @include border;
+        border-bottom: 1px solid $black;
+        display: block;
+        width: 100%;
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 35% 5% 60%;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    " header . . "
+    ". . text ";
+
+  > div:first-of-type {
+    grid-area: header;
+    border-bottom: 1px solid $dark-gray;
+
+    h3 {
+      @include text-XS;
+    }
+  }
+
+  // Text
+  > div:nth-of-type(2) {
+    width: 100%;
+    grid-area: text;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: -1.5vw;
+
+    p {
+      @include text;
+      color: $dark-gray;
+      margin-bottom: 25px;
+    }
+
+    a {
+      @include text-XS;
+      @include link;
+    }
+  }
+
+  @include phone {
+    grid-template-columns: 25% 5% 70%;
+  }
+}
+
+.stack {
+  background-color: $gray;
+  > div:first-of-type {
+    border: 1px solid;
+    display: flex;
+
+    h3 {
+      width: 40%;
+      display: block;
+      @include text-L;
+    }
+    p {
+      width: 60%;
+      display: block;
+    }
+  }
+  > div:nth-of-type(2) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  //background-color: $black;
+  svg:first-of-type {
+    color: #61dbfb;
+    font-size: 4rem;
+  }
+  svg:nth-of-type(2) {
+    color: #f0db4f;
+    font-size: 4rem;
+  }
+  svg:nth-of-type(3) {
+    color: #c69;
+    font-size: 4rem;
+  }
+  svg:nth-of-type(4) {
+    color: #21759b;
+    font-size: 4rem;
+  }
+  svg:nth-of-type(5) {
+    color: #e34c26;
+    font-size: 4rem;
+  }
+  svg:nth-of-type(6) {
+    color: #f34f29;
+    font-size: 4rem;
+  }
+  svg:nth-of-type(7) {
+    color: #563d7c;
+    font-size: 4rem;
+  }
+}
+
+.faqs {
+  @include phone {
+    padding: 50px 0;
+  }
+
+  @include tablet {
+    padding: 75px 0;
+  }
+  @include desktop {
+    padding: 6vw 0;
+  }
+
+  // background-color: $gray;
+  display: flex;
+  align-items: center;
+
+  a {
+    display: block;
+    @include text-XL;
+    @include link;
+    text-align: center;
+  }
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // Img
+  > div:first-of-type {
+    width: 40%;
+    img {
+      width: 100%;
+      //filter: grayscale(100%);
+    }
+    //@include text-XL;
+    font-size: 8rem;
+    color: #61dbfb;
+  }
+
+  // Text
+  > div:nth-of-type(2) {
+    width: 55%;
+
+    h3 {
+      @include text-XS;
+      margin-bottom: 25px;
+    }
+
+    a {
+      display: block;
+      @include text;
+      color: $black;
+      text-decoration: none;
+      &:first-of-type,
+      &:nth-of-type(2) {
+        @include text;
+      }
+
+      span {
+        font-family: "Regular";
+      }
+
+      &:last-of-type {
+        span {
+          position: relative;
+          left: -0.5vw;
+        }
+      }
+    }
+  }
+
+  @include phone {
+    > div:first-of-type {
+      width: 30%;
+    }
+    > div:nth-of-type(2) {
+      width: 65%;
+    }
+  }
+}
