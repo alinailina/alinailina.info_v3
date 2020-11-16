@@ -15,9 +15,7 @@ const Project = ({ project, id }) => {
     contentRef.current.style.maxHeight = active
       ? `${contentRef.current.scrollHeight}px`
       : "0px";
-      contentRef.current.style.paddingBottom = active
-      ? "2vw"
-      : "0px";
+    contentRef.current.style.paddingBottom = active ? "2vw" : "0px";
     titleRef.current.style.borderBottom = active ? "none" : "1px solid #2d2d2d";
     titleRef.current.style.color = active ? "#ff4f09" : "#2d2d2d";
   }, [active]);

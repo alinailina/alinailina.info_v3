@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./index.scss";
 import { NavLink } from "react-router-dom";
-import Colors from "./Colors";
+import Palette from "./Palette";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
@@ -18,15 +18,13 @@ const Navbar = () => {
       >
         <div className="hamburger"></div>
       </div>
+      <Palette />
       <div className="logo">
         <NavLink to="/" exact>
-          <img src={require("../assets/palette_mobile.svg")} alt="logo" />
+          <img src={require("../assets/logo.svg")} alt="logo" />
         </NavLink>
       </div>
       <ul className={active ? "active" : ""}>
-        <li>
-          <Colors/>
-        </li>
         <li>
           <NavLink
             to="/"

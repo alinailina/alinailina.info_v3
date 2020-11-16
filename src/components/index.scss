@@ -18,6 +18,38 @@ nav {
     display: none;
   }
 
+  .palette {
+    position: absolute;
+    top: 0;
+    display: flex;
+    width: 100%;
+    height: 1vw;
+
+    @include phone {
+      height: 10px;
+    }
+
+    > div {
+      width: 25%;
+      &:first-of-type {
+        background-color: white;
+        @include phone {
+          background-color: $gray;
+        }
+      }
+
+      &:nth-of-type(2) {
+        background-color: $dark-gray;
+      }
+      &:nth-of-type(3) {
+        background-color: $red;
+      }
+      &:nth-of-type(4) {
+        background-color: $black;
+      }
+    }
+  }
+
   ul {
     //border: 1px solid;
     padding: 0;
@@ -36,14 +68,6 @@ nav {
       padding-left: 25px;
       @include desktop {
         padding-left: 2vw;
-      }
-      &:first-of-type {
-        width: 100%;
-        padding-left: 0;
-        img {
-          position: relative;
-          top: -4vw;
-        }
       }
 
       sup {
@@ -94,9 +118,9 @@ nav {
     .logo {
       display: block;
       position: fixed;
-      margin-left: 0;
-      width: 30vw;
-      top: 30px;
+      margin-left: 20px;
+      width: 40px;
+      top: 20px;
     }
 
     ul {
@@ -120,10 +144,6 @@ nav {
         a {
           color: $black;
           @include text-L;
-        }
-
-        &:first-of-type {
-          display: none;
         }
 
         &:last-of-type {
@@ -288,29 +308,5 @@ footer {
   @include desktop {
     bottom: 2.5vw;
     right: 3vw;
-  }
-}
-
-.colors {
-  display: flex;
-  width: 100%;
-  height: 20px;
-  > div {
-    width: 25%;
-    &:first-of-type {
-      background-color: white;
-      @include phone {
-        background-color: $gray;
-      }
-    }
-    &:nth-of-type(2) {
-      background-color: $dark-gray;
-    }
-    &:nth-of-type(3) {
-      background-color: $red;
-    }
-    &:nth-of-type(4) {
-      background-color: $black;
-    }
   }
 }

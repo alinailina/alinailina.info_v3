@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../../components/Header";
 import { IoMdArrowDown } from "react-icons/io";
-import { RiArrowRightUpLine} from "react-icons/ri";
+import { RiArrowRightUpLine } from "react-icons/ri";
 import css from "./index.module.scss";
 
 const App = () => {
@@ -33,15 +33,27 @@ const App = () => {
       <div>
         <p>Follow</p>
         <div>
-          <a href="https://www.linkedin.com/in/alinailina/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.linkedin.com/in/alinailina/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Linkedin
             <RiArrowRightUpLine />
           </a>
-          <a href="https://github.com/alinailina" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://github.com/alinailina"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Github
             <RiArrowRightUpLine />
           </a>
-          <a href="https://twitter.com/alinaimagineer" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://twitter.com/alinaimagineer"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Twitter
             <RiArrowRightUpLine />
           </a>

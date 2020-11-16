@@ -9,7 +9,7 @@ const Hero = () => {
         <h1>Alina Ilina</h1>
         <div>
           <div>
-          <img src={require("../../assets/placeholder.png")} alt="logo" />
+            <img src={require("../../assets/placeholder.png")} alt="logo" />
           </div>
         </div>
       </div>

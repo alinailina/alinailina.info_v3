@@ -34,8 +34,8 @@ const Faq = ({ faq }) => {
       <div ref={questionRef} onClick={toogleActive}>
         <p>{question}</p>
         <div className={active ? "accToggle active" : "accToggle"}>
-            <AiOutlinePlus />
-          </div>
+          <AiOutlinePlus />
+        </div>
       </div>
       <div ref={answerRef}>
         <div
