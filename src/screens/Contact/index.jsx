@@ -8,11 +8,14 @@ const App = () => {
   return (
     <div className={css.container}>
       <Header title="Contact" />
-      <h3>Need a developer for your project?</h3>
+      <h3>
+        For any enquiries, <br />
+        or just to say hello
+      </h3>
       <div>
         <label>
           Call
-          <a href="tel:+358465935910">+358465935910</a>
+          <a href="tel:+358465935910">+(358) 4 659 35910</a>
         </label>
         <label>
           Email
@@ -29,35 +32,35 @@ const App = () => {
             CV
           </a>
         </label>
-      </div>
-      <div>
-        <p>Follow</p>
-        <div>
-          <a
-            href="https://www.linkedin.com/in/alinailina/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Linkedin
-            <RiArrowRightUpLine />
-          </a>
-          <a
-            href="https://github.com/alinailina"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Github
-            <RiArrowRightUpLine />
-          </a>
-          <a
-            href="https://twitter.com/alinaimagineer"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Twitter
-            <RiArrowRightUpLine />
-          </a>
-        </div>
+        <label>
+          Follow
+          <div>
+            <a
+              href="https://www.linkedin.com/in/alinailina/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Lk
+              <RiArrowRightUpLine />
+            </a>
+            <a
+              href="https://github.com/alinailina"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Git
+              <RiArrowRightUpLine />
+            </a>
+            <a
+              href="https://twitter.com/alinaimagineer"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Tw
+              <RiArrowRightUpLine />
+            </a>
+          </div>
+        </label>
       </div>
     </div>
   );

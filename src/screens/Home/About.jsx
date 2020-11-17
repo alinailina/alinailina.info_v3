@@ -10,10 +10,7 @@ const About = () => {
       </div>
       <div>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+         Hi! I'm Alina, a Front-End Web Developer and UI Imagineer
         </p>
         <Link to="/about">Read my story</Link>
       </div>

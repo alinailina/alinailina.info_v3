@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./index.scss";
 import { NavLink } from "react-router-dom";
 import Palette from "./Palette";
+import { RiArrowRightUpLine, RiCodeSSlashFill, RiHomeLine,  RiQuestionAnswerLine , RiContactsLine, RiUserLine, RiEditLine} from "react-icons/ri";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
@@ -19,11 +20,7 @@ const Navbar = () => {
         <div className="hamburger"></div>
       </div>
       <Palette />
-      <div className="logo">
-        <NavLink to="/" exact>
-          <img src={require("../assets/logo.svg")} alt="logo" />
-        </NavLink>
-      </div>
+      <NavLink to="/" exact className="logo"></NavLink>
       <ul className={active ? "active" : ""}>
         <li>
           <NavLink
@@ -32,7 +29,8 @@ const Navbar = () => {
             onClick={toggleActive}
             activeClassName="active-navlink"
           >
-            <span>Home</span> <sup>0</sup>
+            
+            <RiHomeLine/>
           </NavLink>
         </li>
         <li>
@@ -41,7 +39,8 @@ const Navbar = () => {
             onClick={toggleActive}
             activeClassName="active-navlink"
           >
-            <span>About</span> <sup>1</sup>
+           
+            <RiUserLine/>
           </NavLink>
         </li>
         <li>
@@ -50,7 +49,8 @@ const Navbar = () => {
             onClick={toggleActive}
             activeClassName="active-navlink"
           >
-            <span>Works</span> <sup>2</sup>
+            
+            <RiCodeSSlashFill/>
           </NavLink>
         </li>
         <li>
@@ -59,7 +59,8 @@ const Navbar = () => {
             onClick={toggleActive}
             activeClassName="active-navlink"
           >
-            <span>Journal</span> <sup>3</sup>
+           
+            <RiEditLine/>
           </NavLink>
         </li>
         <li>
@@ -68,7 +69,8 @@ const Navbar = () => {
             onClick={toggleActive}
             activeClassName="active-navlink"
           >
-            <span>Faqs</span> <sup>4</sup>
+           
+            <RiQuestionAnswerLine/>
           </NavLink>
         </li>
         <li>
@@ -77,10 +79,36 @@ const Navbar = () => {
             onClick={toggleActive}
             activeClassName="active-navlink"
           >
-            {" "}
-            <span>Contact</span> <sup>5</sup>
+          
+          
+            <RiContactsLine/>
           </NavLink>
         </li>
+        <li>  
+          <a
+              href="https://www.linkedin.com/in/alinailina/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Lk
+              <RiArrowRightUpLine />
+            </a>
+            <a
+              href="https://github.com/alinailina"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Git
+              <RiArrowRightUpLine />
+            </a>
+            <a
+              href="https://twitter.com/alinaimagineer"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Tw
+              <RiArrowRightUpLine />
+            </a></li>
       </ul>
     </nav>
   );

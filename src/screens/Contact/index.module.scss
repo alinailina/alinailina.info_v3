@@ -57,33 +57,16 @@
           top: -2px;
         }
       }
-    }
-  }
 
-  // Social links
-  > div:nth-of-type(2) {
-    //border: 1px solid;
-    margin-bottom: 25px;
-    @include desktop {
-      margin-bottom: 2vw;
-    }
-
-    p {
-      @include text-XS;
-      color: $dark-gray;
-    }
-
-    > div {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      a {
-        display: block;
-        @include text;
-        @include link;
-        text-decoration: none;
-        width: 45%;
-        padding: 10px 0;
+      // Social links
+      > div {
+        display: flex;
+        a {
+          margin-right: 3vw;
+          @include phone {
+            margin-right: 5vw;
+          }
+        }
       }
     }
   }

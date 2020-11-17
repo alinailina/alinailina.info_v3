@@ -39,6 +39,7 @@
         padding: 0;
         p {
           @include text;
+          //color: $dark-gray;
           margin-bottom: 25px;
           b {
             font-weight: inherit;

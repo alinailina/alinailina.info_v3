@@ -1,30 +1,54 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300;1,400&display=swap");
-
 @font-face {
-  font-family: "Regular";
+  font-family: "ITC Avant Garde Gothic Std Extra Light";
   font-style: normal;
-  src: url("./assets/fonts/ITCAvantGardeStdBk.otf"); /* IE9 Compat Modes */
+  font-weight: normal;
+  src: local("ITC Avant Garde Gothic Std Extra Light"),
+    url("./assets/fonts/ITCAvantGardeStdXLt.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Light";
+  font-family: "ITC Avant Garde Gothic Std Extra Light Oblique";
   font-style: normal;
-  src: url("./assets/fonts/ITCAvantGardeStdXLt.otf"); /* IE9 Compat Modes */
+  font-weight: normal;
+  src: local("ITC Avant Garde Gothic Std Extra Light Oblique"),
+    url("./assets/fonts/ITCAvantGardeStdXLtObl.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Medium";
+  font-family: "ITC Avant Garde Gothic Std Book";
   font-style: normal;
-  src: url("./assets/fonts/ITCAvantGardeStdMd.otf"); /* IE9 Compat Modes */
+  font-weight: normal;
+  src: local("ITC Avant Garde Gothic Std Book"),
+    url("./assets/fonts/ITCAvantGardeStdBk.woff") format("woff");
 }
 
-$pink: #febecc;
-$blue: #017cfd;
+@font-face {
+  font-family: "ITC Avant Garde Gothic Std Book Oblique";
+  font-style: normal;
+  font-weight: normal;
+  src: local("ITC Avant Garde Gothic Std Book Oblique"),
+    url("./assets/fonts/ITCAvantGardeStdBkObl.woff") format("woff");
+}
+
+@font-face {
+  font-family: "ITC Avant Garde Gothic Std Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("ITC Avant Garde Gothic Std Medium"),
+    url("./assets/fonts/ITCAvantGardeStdMd.woff") format("woff");
+}
+
+@font-face {
+  font-family: "ITC Avant Garde Gothic Std Medium Oblique";
+  font-style: normal;
+  font-weight: normal;
+  src: local("ITC Avant Garde Gothic Std Medium Oblique"),
+    url("./assets/fonts/ITCAvantGardeStdMdObl.woff") format("woff");
+}
+
 $red: #ff4f09;
-
 $black: #2d2d2d;
-$yellow: #fef000;
-$gray: #f2f2f2;
+$gray: #f5f5f5;
 $dark-gray: #bebebe;
 
 * {
@@ -34,13 +58,9 @@ $dark-gray: #bebebe;
 }
 
 body {
-  font-family: "Regular", monospace;
-
-  font-weight: 200;
+  font-family: "ITC Avant Garde Gothic Std Book";
   color: $black;
-
   line-height: 1.5;
-  //text-transform: uppercase;
 }
 
 @mixin phone {
@@ -63,18 +83,24 @@ body {
 
 @mixin container {
   //border: 1px solid;
-  width: 77.5vw;
-  @include desktop {
-    width: 82.5vw;
-  }
-
+  width: 90vw;
   margin-left: auto;
-  padding: 7vw 5vw 2vw;
+  padding: 4vw 5vw 2vw;
 
   @include phone {
     width: 90vw;
     margin: 0 auto;
     padding: 125px 0 30px;
+  }
+  animation: fade-in 1s ease-in-out;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -103,7 +129,7 @@ body {
   }
 
   @include desktop {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   @media only screen and (min-width: 1800px) {
@@ -132,7 +158,7 @@ body {
 }
 
 @mixin text-L {
-  font-weight: 600;
+  font-family: "ITC Avant Garde Gothic Std Book";
 
   @include phone {
     font-size: 1.5rem;
@@ -152,28 +178,7 @@ body {
 }
 
 // Small text
-@mixin small-text {
-  @include phone {
-    font-size: 1rem;
-    font-weight: 300;
-  }
-
-  @include tablet {
-    font-size: 1.25rem;
-  }
-
-  @include desktop {
-    font-size: 1.5rem;
-  }
-
-  @media only screen and (min-width: 1800px) {
-    font-size: 1.5vw;
-  }
-}
-
-// Small text
 @mixin text-XS {
-  font-family: "Regular";
   @include phone {
     font-size: 14px;
   }
@@ -205,10 +210,6 @@ body {
 
 @mixin highlight {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 90%, $red 10%);
-}
-
-@mixin border {
-  border: 1px solid red;
 }
 
 // Backgrounds

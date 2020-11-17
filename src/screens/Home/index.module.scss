@@ -21,6 +21,7 @@
       line-height: 1;
       width: 40%;
       margin: 0;
+      font-family: "ITC Avant Garde Gothic Std Book";
       @include phone {
         font-size: 10vw;
       }
@@ -119,54 +120,82 @@
 }
 
 .stack {
-  background-color: $gray;
+  @include padding;
   > div:first-of-type {
-    border: 1px solid;
+    //border: 1px solid;
     display: flex;
+    flex-direction: column;
 
     h3 {
-      width: 40%;
+      width: 100%;
       display: block;
       @include text-L;
+      text-align: center;
     }
-    p {
-      width: 60%;
-      display: block;
+    > div {
+      border-left: 1px solid;
+      width: 70%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
   }
-  > div:nth-of-type(2) {
-    display: flex;
-    justify-content: space-between;
+
+  svg {
+    //border: 1px solid $black;
+    display: block;
+
+    //border: 1px solid;
+    width: 25%;
+    //margin-bottom: 50px;
+    @include text-XL;
+    color: $gray;
   }
 
   //background-color: $black;
   svg:first-of-type {
     color: #61dbfb;
-    font-size: 4rem;
+
+    color: $dark-gray;
   }
   svg:nth-of-type(2) {
-    color: #f0db4f;
-    font-size: 4rem;
+    &:hover {
+      color: #f0db4f;
+    }
+    //color: $dark-gray;
   }
   svg:nth-of-type(3) {
-    color: #c69;
-    font-size: 4rem;
+    &:hover {
+      color: #c69;
+    }
+
+    //color: $dark-gray;
   }
   svg:nth-of-type(4) {
-    color: #21759b;
-    font-size: 4rem;
+    color: $black;
+    &:hover {
+      color: #21759b;
+    }
+
+    //color: $dark-gray;
   }
   svg:nth-of-type(5) {
     color: #e34c26;
-    font-size: 4rem;
+
+    color: $black;
+    color: $dark-gray;
   }
   svg:nth-of-type(6) {
     color: #f34f29;
-    font-size: 4rem;
+
+    color: $black;
+    color: $dark-gray;
   }
   svg:nth-of-type(7) {
     color: #563d7c;
-    font-size: 4rem;
+
+    color: $black;
+    color: $dark-gray;
   }
 }
 

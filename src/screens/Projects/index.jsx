@@ -42,8 +42,8 @@ const App = () => {
   return (
     <div className={css.container}>
       <div>
-        <h3>Works</h3>
-        <Link to="works">View all</Link>
+        <h3>Apps</h3>
+        <Link to="apps">View all</Link>
       </div>
       <Projects projects={projects} />
     </div>
