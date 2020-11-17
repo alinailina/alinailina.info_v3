@@ -85,7 +85,7 @@ body {
   //border: 1px solid;
   width: 90vw;
   margin-left: auto;
-  padding: 4vw 5vw 2vw;
+  padding: 5vw 5vw 2vw;
 
   @include phone {
     width: 90vw;
@@ -326,7 +326,7 @@ body {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 3vw 0;
+      padding: 2vw 0;
       @include phone {
         padding: 5vw 0;
       }

@@ -41,10 +41,22 @@ const App = () => {
   return (
     <div className={css.container}>
       <Header title="Apps" />
+      <p>Here are some of the apps I worked on:</p>
       <Apps apps={apps} />
-    <div>
-      <p>I regularly post new apps on Github<RiArrowRightUpLine /></p>
-    </div>
+      <div>
+        <p>
+          I regularly post new stuff <br />
+          on{" "}
+          <a
+            href="https://github.com/alinailina"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Github
+            <RiArrowRightUpLine />
+          </a>
+        </p>
+      </div>
     </div>
   );
 };

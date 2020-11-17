@@ -1,13 +1,27 @@
 import React from "react";
+
 import {
   FaReact,
-  FaSass,
   FaWordpress,
-  FaHtml5,
-  FaGitAlt,
+  FaSass,
+  FaGithub,
   FaBootstrap,
+  FaGitAlt,
+  FaFigma,
+  FaCss3Alt,
+  FaNpm,
+  FaHtml5,
+  FaNodeJs,
+  FaLess,
 } from "react-icons/fa";
-import { SiJavascript } from "react-icons/si";
+
+import {
+  SiJavascript,
+  SiAdobexd,
+  SiMaterialUi,
+  SiJson,
+  SiVisualstudio,
+} from "react-icons/si";
 
 // Styles
 import css from "./index.module.scss";
@@ -15,20 +29,67 @@ import css from "./index.module.scss";
 const Stack = () => {
   return (
     <div className={css.stack}>
+      <h3>My primary technologies</h3>
       <div>
-        <h3>Technologies</h3>
-        <div>
-        <FaReact />
-        <SiJavascript />
-        <FaSass />
-        <FaWordpress />
-        <FaHtml5 />
-        <FaGitAlt />
-        <FaBootstrap />
-        <FaBootstrap />
+        <p>
+          <FaReact /> React/React Native
+        </p>
+        <p>
+          <SiJavascript /> JavaScript
+        </p>
+        <p>
+          <FaCss3Alt /> CSS3
+        </p>
+        <p>
+          <FaSass /> Sass
+        </p>
+        <p>
+          <FaBootstrap /> Bootstrap
+        </p>
+        <p>
+          <SiMaterialUi /> Material UI
+        </p>
+        <p>
+          <FaWordpress /> WordPress (as a headless CMS)
+        </p>
+        <p>Contenful</p>
+        <p>
+          <FaLess /> Less
+        </p>
+        <p>
+          <SiVisualstudio />
+          VScode
+        </p>
+        <p>
+          <FaGitAlt /> Git
+        </p>
+        <p>
+          <FaGithub />
+          Github
+        </p>
+        <p>
+          <FaNpm /> Npm
+        </p>
+        <p>
+          <FaNodeJs />
+          NodeJs
+        </p>
+        <p>
+          <SiJson />
+          Json
+        </p>
+        <p>
+          <FaHtml5 />
+          HTML5
+        </p>
+        <p>{"{REST: API}"}</p>{" "}
+        <p>
+          <FaFigma /> Figma
+        </p>
+        <p>
+          <SiAdobexd /> AdobeXD
+        </p>
       </div>
-      </div>
-    
     </div>
   );
 };

@@ -4,20 +4,31 @@
   @include container;
 
   > div {
-    p {
+    > p {
       @include text;
-      max-width: 35em;
+      max-width: 50em;
       margin-bottom: 25px;
+
+      > span {
+        display: block;
+        @include text-XL;
+
+        margin: 25px 0;
+        @include desktop {
+          margin: 2vw 0;
+        }
+        span {
+          @include highlight;
+        }
+      }
 
       a {
         @include link;
       }
     }
+
     > div {
       width: 25%;
-      img {
-        width: 100%;
-      }
     }
   }
 }

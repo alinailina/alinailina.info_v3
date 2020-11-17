@@ -10,7 +10,10 @@ const About = () => {
       </div>
       <div>
         <p>
-         Hi! I'm Alina, a Front-End Web Developer and UI Imagineer
+          Hello! My name is Alina. I'm a Front-End Developer and UI Imagineer. I
+          make <span> clean</span>, <span>predictable</span> and{" "}
+          <span>simply awesome</span> React.js applications that meet high
+          standards for usability and scale.
         </p>
         <Link to="/about">Read my story</Link>
       </div>

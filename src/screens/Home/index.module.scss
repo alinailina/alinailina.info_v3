@@ -39,7 +39,7 @@
     > div {
       width: 60%;
       > div {
-        width: 90%;
+        width: 70%;
         margin: 0 auto;
       }
       img {
@@ -97,15 +97,15 @@
     padding: 0;
     margin: 0;
     position: relative;
-    top: -1.5vw;
-    @include phone {
-      top: -2vw;
-    }
+    top: -0.9em;
 
     p {
       @include text;
-      color: $dark-gray;
+      // color: $dark-gray;
       margin-bottom: 25px;
+      span {
+        @include highlight;
+      }
     }
 
     a {
@@ -120,163 +120,36 @@
 }
 
 .stack {
-  @include padding;
-  > div:first-of-type {
-    //border: 1px solid;
-    display: flex;
-    flex-direction: column;
-
-    h3 {
-      width: 100%;
-      display: block;
-      @include text-L;
-      text-align: center;
-    }
-    > div {
-      border-left: 1px solid;
-      width: 70%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-  }
-
-  svg {
-    //border: 1px solid $black;
-    display: block;
-
-    //border: 1px solid;
-    width: 25%;
-    //margin-bottom: 50px;
-    @include text-XL;
-    color: $gray;
-  }
-
-  //background-color: $black;
-  svg:first-of-type {
-    color: #61dbfb;
-
-    color: $dark-gray;
-  }
-  svg:nth-of-type(2) {
-    &:hover {
-      color: #f0db4f;
-    }
-    //color: $dark-gray;
-  }
-  svg:nth-of-type(3) {
-    &:hover {
-      color: #c69;
-    }
-
-    //color: $dark-gray;
-  }
-  svg:nth-of-type(4) {
-    color: $black;
-    &:hover {
-      color: #21759b;
-    }
-
-    //color: $dark-gray;
-  }
-  svg:nth-of-type(5) {
-    color: #e34c26;
-
-    color: $black;
-    color: $dark-gray;
-  }
-  svg:nth-of-type(6) {
-    color: #f34f29;
-
-    color: $black;
-    color: $dark-gray;
-  }
-  svg:nth-of-type(7) {
-    color: #563d7c;
-
-    color: $black;
-    color: $dark-gray;
-  }
-}
-
-.faqs {
-  @include phone {
-    padding: 50px 0;
-  }
-
-  @include tablet {
-    padding: 75px 0;
-  }
+  margin-top: 50px;
   @include desktop {
-    padding: 6vw 0;
+    margin-top: 4vw;
   }
 
-  // background-color: $gray;
-  display: flex;
-  align-items: center;
-
-  a {
+  h3 {
+    width: 100%;
     display: block;
-    @include text-XL;
-    @include link;
-    text-align: center;
-  }
-}
+    @include text;
 
-.contact {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  // Img
-  > div:first-of-type {
-    width: 40%;
-    img {
-      width: 100%;
-      //filter: grayscale(100%);
+    margin-bottom: 25px;
+    @include desktop {
+      margin-bottom: 2vw;
     }
-    //@include text-XL;
-    font-size: 8rem;
-    color: #61dbfb;
   }
+  > div {
+    display: flex;
+    flex-wrap: wrap;
 
-  // Text
-  > div:nth-of-type(2) {
-    width: 55%;
-
-    h3 {
-      @include text-XS;
-      margin-bottom: 25px;
-    }
-
-    a {
-      display: block;
+    p {
       @include text;
-      color: $black;
-      text-decoration: none;
-      &:first-of-type,
-      &:nth-of-type(2) {
-        @include text;
-      }
 
-      span {
-        font-family: "Regular";
+      display: flex;
+      align-items: center;
+      padding: 10px 25px 10px 0;
+      svg {
+        @include text-L;
+        color: $dark-gray;
+        margin-right: 0.25em;
       }
-
-      &:last-of-type {
-        span {
-          position: relative;
-          left: -0.5vw;
-        }
-      }
-    }
-  }
-
-  @include phone {
-    > div:first-of-type {
-      width: 30%;
-    }
-    > div:nth-of-type(2) {
-      width: 65%;
     }
   }
 }

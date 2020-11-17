@@ -2,7 +2,15 @@ import React, { useState } from "react";
 import "./index.scss";
 import { NavLink } from "react-router-dom";
 import Palette from "./Palette";
-import { RiArrowRightUpLine, RiCodeSSlashFill, RiHomeLine, RiQuestionAnswerLine , RiContactsLine, RiUserLine, RiEditLine} from "react-icons/ri";
+import {
+  RiArrowRightUpLine,
+  RiCodeSSlashFill,
+  RiHomeLine,
+  RiQuestionAnswerLine,
+  RiContactsLine,
+  RiUserLine,
+  RiEditLine,
+} from "react-icons/ri";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
@@ -29,8 +37,7 @@ const Navbar = () => {
             onClick={toggleActive}
             activeClassName="active-navlink"
           >
-            
-            <RiHomeLine/>
+            <RiHomeLine />
           </NavLink>
         </li>
         <li>
@@ -39,8 +46,7 @@ const Navbar = () => {
             onClick={toggleActive}
             activeClassName="active-navlink"
           >
-           
-            <RiUserLine/>
+            <RiUserLine />
           </NavLink>
         </li>
         <li>
@@ -49,8 +55,7 @@ const Navbar = () => {
             onClick={toggleActive}
             activeClassName="active-navlink"
           >
-            
-            <RiCodeSSlashFill/>
+            <RiCodeSSlashFill />
           </NavLink>
         </li>
         <li>
@@ -59,8 +64,7 @@ const Navbar = () => {
             onClick={toggleActive}
             activeClassName="active-navlink"
           >
-           
-            <RiEditLine/>
+            <RiEditLine />
           </NavLink>
         </li>
         <li>
@@ -69,8 +73,7 @@ const Navbar = () => {
             onClick={toggleActive}
             activeClassName="active-navlink"
           >
-           
-            <RiQuestionAnswerLine/>
+            <RiQuestionAnswerLine />
           </NavLink>
         </li>
         <li>
@@ -79,36 +82,35 @@ const Navbar = () => {
             onClick={toggleActive}
             activeClassName="active-navlink"
           >
-          
-          
-            <RiContactsLine/>
+            <RiContactsLine />
           </NavLink>
         </li>
-        <li>  
+        <li>
           <a
-              href="https://www.linkedin.com/in/alinailina/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Lk
-              <RiArrowRightUpLine />
-            </a>
-            <a
-              href="https://github.com/alinailina"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Git
-              <RiArrowRightUpLine />
-            </a>
-            <a
-              href="https://twitter.com/alinaimagineer"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Tw
-              <RiArrowRightUpLine />
-            </a></li>
+            href="https://www.linkedin.com/in/alinailina/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Lk
+            <RiArrowRightUpLine />
+          </a>
+          <a
+            href="https://github.com/alinailina"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Git
+            <RiArrowRightUpLine />
+          </a>
+          <a
+            href="https://twitter.com/alinaimagineer"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Tw
+            <RiArrowRightUpLine />
+          </a>
+        </li>
       </ul>
     </nav>
   );
