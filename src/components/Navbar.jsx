@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./index.scss";
 import { NavLink } from "react-router-dom";
 import Palette from "./Palette";
-import { RiArrowRightUpLine, RiCodeSSlashFill, RiHomeLine,  RiQuestionAnswerLine , RiContactsLine, RiUserLine, RiEditLine} from "react-icons/ri";
+import { RiArrowRightUpLine, RiCodeSSlashFill, RiHomeLine, RiQuestionAnswerLine , RiContactsLine, RiUserLine, RiEditLine} from "react-icons/ri";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);

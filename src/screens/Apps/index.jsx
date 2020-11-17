@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Projects from "./Projects";
+import Apps from "./Apps";
 
 // Styles
 import css from "./index.module.scss";
@@ -28,16 +28,16 @@ const App = () => {
 
   console.log(loading);
 
-  // Filter featured projects
-  const projects = [];
+  // Filter featured apps
+  const apps = [];
   entries.filter((entry) =>
-    entry.sys.contentType.sys.id === "project" &&
+    entry.sys.contentType.sys.id === "app" &&
     entry.fields.featured === "featured"
-      ? projects.push(entry)
+      ? apps.push(entry)
       : null
   );
 
-  console.log(projects);
+  console.log(apps);
 
   return (
     <div className={css.container}>
@@ -45,7 +45,7 @@ const App = () => {
         <h3>Apps</h3>
         <Link to="apps">View all</Link>
       </div>
-      <Projects projects={projects} />
+      <Apps apps={apps} />
     </div>
   );
 };

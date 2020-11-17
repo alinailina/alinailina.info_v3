@@ -5,8 +5,8 @@ import { RiArrowRightUpLine } from "react-icons/ri";
 // Styles
 import css from "./index.module.scss";
 
-const Project = ({ project, id }) => {
-  const { title, description, link } = project.fields;
+const App = ({ app, id }) => {
+  const { title, description, link } = app.fields;
   const [active, setActive] = useState(false);
   const titleRef = useRef(null);
   const contentRef = useRef(null);
@@ -24,7 +24,7 @@ const Project = ({ project, id }) => {
   };
 
   return (
-    <div className={css.project}>
+    <div className={css.app}>
       <div ref={titleRef} onClick={toogleActive}>
         <p>0{id + 1}</p>
         <div>
@@ -47,4 +47,4 @@ const Project = ({ project, id }) => {
   );
 };
 
-export default Project;
+export default App;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 //import { Link } from "react-router-dom";
 import Header from "../../components/Header";
-import Projects from "../Projects/Projects";
+import Apps from "../Apps/Apps";
 import { RiArrowRightUpLine } from "react-icons/ri";
 
 // Styles
@@ -31,17 +31,17 @@ const App = () => {
   console.log(loading);
 
   // Filter all projects
-  const projects = [];
+  const apps = [];
   entries.filter((entry) =>
-    entry.sys.contentType.sys.id === "project" ? projects.push(entry) : null
+    entry.sys.contentType.sys.id === "app" ? apps.push(entry) : null
   );
 
-  console.log(projects);
+  console.log(apps);
 
   return (
     <div className={css.container}>
       <Header title="Apps" />
-      <Projects projects={projects} />
+      <Apps apps={apps} />
     <div>
       <p>I regularly post new apps on Github<RiArrowRightUpLine /></p>
     </div>
