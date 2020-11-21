@@ -2,6 +2,22 @@
 
 .container {
   @include container;
+
+  // App section header
+  > div:nth-of-type(3) {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+
+    h3,
+    a {
+      @include text-XS;
+    }
+
+    a {
+      @include link;
+    }
+  }
 }
 
 .hero {

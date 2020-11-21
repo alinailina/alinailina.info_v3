@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import Apps from "./Apps";
+import Header from "../../components/Header";
+import Apps from "../../components/Apps";
+import { RiArrowRightUpLine } from "react-icons/ri";
 
-// Styles
 import css from "./index.module.scss";
 
 // Contentful delivery API
@@ -28,24 +28,32 @@ const App = () => {
 
   console.log(loading);
 
-  // Filter featured apps
+  // Filter apps
   const apps = [];
   entries.filter((entry) =>
-    entry.sys.contentType.sys.id === "app" &&
-    entry.fields.featured === "featured"
-      ? apps.push(entry)
-      : null
+    entry.sys.contentType.sys.id === "app" ? apps.push(entry) : null
   );
 
   console.log(apps);
 
   return (
     <div className={css.container}>
-      <div>
-        <h3>Apps</h3>
-        <Link to="apps">View all</Link>
-      </div>
+      <Header title="Apps" icon="RiCodeSSlashFill"/>
       <Apps apps={apps} />
+      <div>
+        <p>
+          I regularly post new stuff <br />
+          on{" "}
+          <a
+            href="https://github.com/alinailina"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Github
+            <RiArrowRightUpLine />
+          </a>
+        </p>
+      </div>
     </div>
   );
 };

@@ -17,6 +17,7 @@ nav {
 
   .palette {
     position: absolute;
+    z-index: 2;
     top: 0;
     display: flex;
     width: 100vw;
@@ -84,6 +85,9 @@ nav {
             color: $red;
           }
         }
+        > p {
+          display: none;
+        }
       }
 
       // Social links
@@ -121,49 +125,64 @@ nav {
       position: fixed;
       left: 20px;
       top: 20px;
+      z-index: 2;
     }
 
     ul {
-      background-color: $black;
+      // border: 1px solid yellow;
+      background-color: white;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
+      flex-direction: row;
+      //flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-between;
       position: fixed;
-      top: 0;
-      right: -100%;
+      top: -100%;
+      // right: -100%;
       height: 100%;
-      width: 25%;
+      width: 100%;
       padding: 100px 4vw 10vw;
       transition-property: all;
       transition-duration: 0.5s;
       transition-delay: 0;
       transition-timing-function: cubic-bezier(0.66, 0, 0.34, 1);
       z-index: 1;
+
       li {
+        display: block;
+        width: 30%;
+        // border: 1px solid red;
         a {
-          color: white;
           @include text-L;
+          text-align: center;
           svg {
             font-size: 2rem;
             &:hover {
               color: $red;
             }
           }
+          > p {
+            display: block;
+            @include text;
+          }
         }
 
         &:last-of-type {
+          width: 100%;
           display: flex;
           justify-content: space-between;
-          flex-direction: column;
+
           a {
-            @include text;
+            display: block;
+            width: 30%;
+            @include text-L;
+            text-align: center;
           }
         }
       }
 
       &.active {
-        right: 0;
+        top: 0;
       }
     }
 
@@ -216,13 +235,13 @@ nav {
           &:before {
             top: 0;
             transform: rotate(45deg);
-            background-color: white;
+            background-color: $black;
           }
 
           &:after {
             top: 0;
             transform: rotate(135deg);
-            background-color: white;
+            background-color: $black;
           }
         }
       }
@@ -326,5 +345,95 @@ footer {
   @include desktop {
     bottom: 2.5vw;
     right: 4vw;
+  }
+}
+
+.accToggle {
+  position: relative;
+  //border: 1px solid;
+  transform: rotate(0deg);
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.66, 0, 0.34, 1);
+  left: 0;
+  &.active {
+    transform: rotate(45deg);
+    left: -2px;
+  }
+}
+
+// Accordeon
+.apps {
+  .app {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    // Header bar
+    > div:first-of-type {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2vw 0;
+      @include phone {
+        padding: 5vw 0;
+      }
+      margin-bottom: 10px;
+      cursor: pointer;
+
+      // Num
+      > p {
+        display: block;
+        width: 40%;
+        @include text;
+      }
+
+      > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 60%;
+        @include phone {
+          width: 95%;
+        }
+
+        // Title
+        > h3 {
+          @include text;
+        }
+        // Toggle
+        > div {
+          @include text;
+        }
+      }
+    }
+
+    // Description
+    > div:nth-of-type(2) {
+      overflow: hidden;
+      transition: all 0.5s ease;
+      display: flex;
+      justify-content: flex-end;
+
+      > div {
+        width: 60%;
+        @include phone {
+          width: 100%;
+        }
+      }
+
+      p {
+        @include text;
+        color: $dark-gray;
+        margin-bottom: 25px;
+      }
+
+      a {
+        display: block;
+        @include text;
+        @include link;
+        margin-bottom: 50px;
+      }
+    }
   }
 }

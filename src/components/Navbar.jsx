@@ -38,6 +38,7 @@ const Navbar = () => {
             activeClassName="active-navlink"
           >
             <RiHomeLine />
+            <p>Home</p>
           </NavLink>
         </li>
         <li>
@@ -47,15 +48,17 @@ const Navbar = () => {
             activeClassName="active-navlink"
           >
             <RiUserLine />
+            <p>About</p>
           </NavLink>
         </li>
         <li>
           <NavLink
-            to="works"
+            to="apps"
             onClick={toggleActive}
             activeClassName="active-navlink"
           >
             <RiCodeSSlashFill />
+            <p>Apps</p>
           </NavLink>
         </li>
         <li>
@@ -65,6 +68,7 @@ const Navbar = () => {
             activeClassName="active-navlink"
           >
             <RiEditLine />
+            <p>Journal</p>
           </NavLink>
         </li>
         <li>
@@ -74,6 +78,7 @@ const Navbar = () => {
             activeClassName="active-navlink"
           >
             <RiQuestionAnswerLine />
+            <p>Faqs</p>
           </NavLink>
         </li>
         <li>
@@ -83,6 +88,7 @@ const Navbar = () => {
             activeClassName="active-navlink"
           >
             <RiContactsLine />
+            <p>Contact</p>
           </NavLink>
         </li>
         <li>

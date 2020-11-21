@@ -2,9 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import { AiOutlinePlus } from "react-icons/ai";
 import { RiArrowRightUpLine } from "react-icons/ri";
 
-// Styles
-import css from "./index.module.scss";
-
 const App = ({ app, id }) => {
   const { title, description, link } = app.fields;
   const [active, setActive] = useState(false);
@@ -24,7 +21,7 @@ const App = ({ app, id }) => {
   };
 
   return (
-    <div className={css.app}>
+    <div className="app">
       <div ref={titleRef} onClick={toogleActive}>
         <p>0{id + 1}</p>
         <div>

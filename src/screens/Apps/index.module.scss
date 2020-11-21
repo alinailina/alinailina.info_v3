@@ -1,21 +1,27 @@
 @import "../../index.scss";
 
 .container {
-  @include padding;
+  @include container;
 
-  // Header
-  > div:first-of-type {
-    display: flex;
-    justify-content: space-between;
-    padding: 25px 0;
-
-    h3,
-    a {
-      @include text-XS;
+  p {
+    @include text;
+    margin-bottom: 25px;
+    @include desktop {
+      margin-bottom: 2vw;
     }
+  }
 
-    a {
-      @include link;
+  > div:nth-of-type(2) {
+    margin-top: 25px;
+    @include desktop {
+      margin-top: 2vw;
+    }
+    p {
+      @include text-XL;
+
+      a {
+        @include link;
+      }
     }
   }
 }

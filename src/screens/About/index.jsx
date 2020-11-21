@@ -44,9 +44,10 @@ const App = () => {
           connection with their audience.
         </p>
         <p>
-          My strong interests in usability and interaction design inform my work as a Developer. I believe less is more and strive for depth through
-          simplicity &mdash; making everything obvious or self-explanatory is my
-          ultimate goal as a Developer and a Human.
+          My strong interests in usability and interaction design inform my work
+          as a Developer. I believe less is more and strive for depth through
+          simplicity &mdash; making everything obvinpm startous or
+          self-explanatory is my ultimate goal as a Developer and a Human.
         </p>
 
         <p>
@@ -55,16 +56,15 @@ const App = () => {
         </p>
 
         <p>
-          When I'm not writing code, I like to do my strength training
-          exercises, listen to podcasts and watch popular science documentaries.
+          When I'm not writing code, I like to do strength training exercises,
+          listen to podcasts and watch popular science documentaries.
         </p>
 
-        <p>You've made it this far, nice! Enjoy your {formatDay(new Date())}!</p>
         <p>
-          Regards, 
-        
+          You've made it this far, nice! Enjoy your {formatDay(new Date())}!
         </p>
-          <p>  Alina</p>
+        <p>Regards,</p>
+        <p> Alina</p>
         <div>
           <img src={require("../../assets/signature.svg")} alt="" />
         </div>
